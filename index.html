@@ -3,95 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeremy Shanks · Exoplanet Astronomy</title>
-<meta name="description" content="Jeremy Shanks — undergraduate researcher in astronomy studying exoplanets.">
+<title>Jeremy Shanks | Astronomy</title>
+<meta name="description" content="Jeremy Shanks, undergraduate astronomy researcher at the University of Arizona working on high-contrast imaging of substellar companions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f7f5f0;          /* warm paper */
+    --bg:#f7f5f0;
     --ink:#1c1f26;
     --muted:#5d6370;
     --line:#dcd7cc;
-    --accent:#c2562b;      /* M-dwarf orange */
+    --accent:#c2562b;
     --accent-soft:#f3e3d8;
-    --deep:#121826;        /* header sky */
-    --max:880px;
+    --deep:#121826;
+    --max:860px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  [hidden]{display:none!important}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+  body{background:var(--bg);color:var(--ink);font:17px/1.65 "Source Sans 3",system-ui,sans-serif}
   a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
   a:hover{border-bottom-color:var(--accent)}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 
-  /* ---------- nav ---------- */
-  nav{position:sticky;top:0;z-index:10;background:rgba(18,24,38,.92);backdrop-filter:blur(8px)}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
-  nav .brand{font-family:Fraunces,serif;font-weight:600;color:#fff;border:0}
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(18,24,38,.94)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:54px}
+  nav .brand{font-family:"Source Serif 4",serif;font-weight:600;color:#fff;border:0}
   nav ul{display:flex;gap:22px;list-style:none}
-  nav ul a{color:#c9cfdb;font-size:14px;border:0}
+  nav ul a{color:#c9cfdb;font-size:15px;border:0}
   nav ul a:hover{color:#fff}
 
-  /* ---------- hero with transit light curve ---------- */
-  header{background:var(--deep);color:#fff;padding:72px 0 120px;position:relative;overflow:hidden}
-  header .wrap{display:grid;grid-template-columns:180px 1fr;gap:40px;align-items:center;position:relative;z-index:1}
-  .photo{width:180px;height:180px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.15);background:#2a3245}
-  header h1{font-family:Fraunces,serif;font-weight:600;font-size:44px;line-height:1.1;margin-bottom:8px}
-  header .role{color:#e9a27f;font-weight:500;margin-bottom:4px}
-  header .inst{color:#aab2c2;font-size:15px}
+  /* header */
+  header{background:var(--deep);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
+  header .wrap{display:grid;grid-template-columns:170px 1fr;gap:40px;align-items:center;position:relative;z-index:1}
+  .photo{width:170px;height:170px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.15);background:#2a3245}
+  header h1{font-family:"Source Serif 4",serif;font-weight:600;font-size:42px;line-height:1.1;margin-bottom:8px}
+  header .role{color:#e9a27f;font-weight:600;margin-bottom:2px}
+  header .inst{color:#aab2c2;font-size:16px}
   header .links{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
-  header .links a{font-size:13px;color:#fff;border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:999px}
-  header .links a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
-  .lightcurve{position:absolute;left:0;right:0;bottom:0;width:100%;height:90px;opacity:.35}
+  header .links a{font-size:14px;color:#fff;border:1px solid rgba(255,255,255,.3);padding:5px 14px;border-radius:6px}
+  header .links a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55)}
+  .sky{position:absolute;right:0;top:0;height:100%;width:46%;opacity:.55;pointer-events:none}
 
-  /* ---------- sections ---------- */
-  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  /* sections */
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
   section:last-of-type{border-bottom:0}
-  h2{font-family:Fraunces,serif;font-weight:600;font-size:28px;margin-bottom:20px;display:flex;align-items:baseline;gap:12px}
-  h2 .num{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);font-weight:400}
+  h2{font-family:"Source Serif 4",serif;font-weight:600;font-size:28px;margin-bottom:18px}
   p+p{margin-top:14px}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-  .tags span{background:var(--accent-soft);color:#8a3a19;font-size:13px;padding:4px 12px;border-radius:999px}
 
-  /* ---------- entries (papers / posters / talks) ---------- */
-  .entry{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 0;border-top:1px dashed var(--line)}
+  /* entries */
+  .entry{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
   .entry:first-of-type{border-top:0}
-  .entry .date{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);padding-top:3px}
+  .date{font-size:15px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
   .entry h3{font-size:17px;font-weight:600;line-height:1.4}
-  .entry .meta{color:var(--muted);font-size:14px;margin-top:2px}
-  .entry .meta b{color:var(--ink);font-weight:600}
-  .entry .actions{margin-top:8px;display:flex;gap:14px;font-size:14px}
-  .badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-right:8px;vertical-align:2px}
-  .badge.draft{background:#fff3cd;color:#7a5a00}
+  .entry .meta{color:var(--muted);font-size:15px;margin-top:2px}
+  .entry .actions{margin-top:6px;font-size:15px}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:4px;margin-right:8px;vertical-align:2px}
+  .badge.prep{background:#fff3cd;color:#7a5a00}
   .badge.poster{background:#e2ecf7;color:#1f4f82}
   .badge.talk{background:#e6f2e6;color:#2d6a2d}
 
-  .feature{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}
-  .feature img{width:100%;border-radius:6px;background:#e8e4da;aspect-ratio:4/3;object-fit:cover}
-  .feature figcaption{font-size:13px;color:var(--muted)}
+  figure{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px}
+  figure img{width:100%;border-radius:4px;background:#e8e4da;display:block}
+  figcaption{font-size:14px;color:var(--muted);margin-top:12px}
 
-  .cv-box{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px}
-  .btn{background:var(--accent);color:#fff;padding:10px 20px;border-radius:6px;font-weight:500;font-size:15px;border:0;white-space:nowrap}
-  .btn:hover{background:#a8461f;border:0}
+  .edu{list-style:none}
+  .edu li{padding:6px 0;display:grid;grid-template-columns:96px 1fr;gap:20px}
+  .cv-link{display:inline-block;margin-top:22px;background:var(--accent);color:#fff;padding:9px 18px;border-radius:6px;font-weight:600;font-size:15px;border:0}
+  .cv-link:hover{background:#a8461f;border:0}
 
-  .edu li{list-style:none;padding:10px 0;display:grid;grid-template-columns:110px 1fr;gap:20px}
-  .edu .date{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);padding-top:3px}
-
-  footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
+  footer{padding:32px 0 44px;color:var(--muted);font-size:14px}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
   @media (max-width:680px){
-    nav ul{gap:14px} nav ul li:nth-child(n+4){display:none}
-    header .wrap{grid-template-columns:1fr;text-align:center;gap:24px}
-    .photo{margin:0 auto;width:140px;height:140px}
+    nav ul{gap:14px} nav ul li:nth-child(n+5){display:none}
+    header .wrap{grid-template-columns:1fr;text-align:center;gap:22px}
+    .photo{margin:0 auto;width:130px;height:130px}
     header h1{font-size:34px}
     header .links{justify-content:center}
-    .entry,.edu li{grid-template-columns:1fr;gap:4px}
-    .feature{grid-template-columns:1fr}
-    .cv-box{flex-direction:column;align-items:flex-start}
+    .sky{display:none}
+    .entry,.edu li{grid-template-columns:1fr;gap:2px}
   }
 </style>
 </head>
@@ -111,71 +103,76 @@
 </nav>
 
 <header>
+  <svg class="sky" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="#c9cfdb">
+      <circle cx="40" cy="40" r="1"/><circle cx="92" cy="210" r="1.2"/><circle cx="130" cy="70" r=".8"/>
+      <circle cx="170" cy="260" r="1"/><circle cx="350" cy="50" r="1.1"/><circle cx="372" cy="230" r=".9"/>
+      <circle cx="310" cy="275" r="1"/><circle cx="60" cy="140" r=".7"/><circle cx="380" cy="140" r=".8"/>
+    </g>
+    <circle cx="250" cy="150" r="46" fill="none" stroke="#e9a27f" stroke-opacity=".18" stroke-width="10"/>
+    <circle cx="250" cy="150" r="26" fill="none" stroke="#e9a27f" stroke-opacity=".28" stroke-width="6"/>
+    <circle cx="250" cy="150" r="16" fill="#0b0f19"/>
+    <circle cx="286" cy="118" r="3" fill="#e9a27f"/>
+  </svg>
   <div class="wrap">
-    <!-- Put your headshot in the images/ folder and keep this filename, or change it here -->
-    <img class="photo" src="headshot.jpg" alt="Photo of Jeremy">
+    <img class="photo" src="images/headshot.jpg" alt="Jeremy Shanks">
     <div>
       <h1>Jeremy Shanks</h1>
-      <div class="role">Undergraduate Researcher · Exoplanet Astronomy</div>
-      <div class="inst">Department of Astronomy/Steward Observatory, University of Arizona</div>
+      <div class="role">Undergraduate Researcher, Astronomy</div>
+      <div class="inst">Department of Astronomy / Steward Observatory, University of Arizona</div>
       <div class="links">
-        <a href="CV.pdf">CV (PDF)</a>
+        <a href="Shanks_CV.pdf">CV (PDF)</a>
         <a href="https://github.com/Jeremy-Shanks">GitHub</a>
+        <a href="mailto:jeremyshanks@arizona.edu">Email</a>
       </div>
     </div>
   </div>
-  <!-- decorative transit light curve -->
-  <svg class="lightcurve" viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true">
-    <g fill="#e9a27f"></g>
-    <path d="M0,30 L400,30 C430,30 440,62 470,62 L530,62 C560,62 570,30 600,30 L1000,30" fill="none" stroke="#e9a27f" stroke-width="1.5"/>
-  </svg>
 </header>
 
 <main class="wrap">
 
   <section id="about">
-    <h2><span class="num">01</span>About</h2>
-    <p>I'm a senior at The University of Arizona majoring in Astronomy with a minor in Physics, Computer Science, and Astrobiology. 
-      I work with Dr. Kevin Wagner on direct imaging of substellar companions and building exoplanet reduction pipelines with data from the Large Binocular Telescope.</p>
-    <p>In graduate school, I want to continue research in high-contrast imaging of exoplanets and apply my computer science background to 
-      improving post-processing techniques and building tools for future instruments and missions, such as the Habitable Worlds Observatory. 
-      My long-term goal, shaped by my minor in Astrobiology, is to help image small, rocky planets and characterize those that may be Earth analogs.<p>
+    <h2>About</h2>
+    <p>I'm a senior at the University of Arizona majoring in astronomy, with minors in physics, computer science, and astrobiology.
+      I work with Dr. Kevin Wagner on direct imaging of substellar companions, building reduction pipelines for data from the Large Binocular Telescope.</p>
+    <p>In graduate school, I want to continue research in high-contrast imaging of exoplanets and use my computer science background to
+      improve post-processing techniques and build tools for future instruments and missions, such as the Habitable Worlds Observatory.
+      My long-term goal, shaped by my minor in astrobiology, is to help image small, rocky planets and characterize those that may be Earth analogs.</p>
   </section>
 
   <section id="research">
-    <h2><span class="num">02</span>Research</h2>
-    <p>My primary research has been developing a Python-based exoplanet reduction pipeline using data from the Large Binocular Telescope. The specific system targetted was HD 984 and its substellar
-    companion brown dwarf HD 984 B. Constraining the age, orbital parameters, and mass of this companion help to better understand its formation as well as the formation pathways of other similarly-
-    aged companions.</p>
+    <h2>Research</h2>
+    <p>I developed an open-source Python pipeline to reduce high-contrast imaging data of HD 984 and its brown dwarf companion, HD 984 B,
+      taken with the Large Binocular Telescope Interferometer (LBTI). We are using these data to characterize the companion's orbit and atmosphere
+      and constrain its mass, which helps us understand how it formed and how similar young companions form.
+      The pipeline is <a href="https://github.com/Jeremy-Shanks/lmircam-adi">available on GitHub</a>.</p>
 
-    <figure class="feature">
-      <img src="HD984_PCA_Nods_KL10.png" alt="Figure from paper showing reduced HD 984">
-      <figcaption><b>HD 984 B</b><br>PSF-subtracted images of HD 984 showing the companion HD 984 B (labeled) to the northeast of the star, from nod
-position A (left), nod position B (right), and their average (bottom).  Credit: Shanks, Wagner et al. 2026</figcaption>
+    <figure>
+      <img src="images/HD984_PCA_Nods_KL10.png" alt="PSF-subtracted LBTI images of HD 984 showing the companion HD 984 B">
+      <figcaption><b>HD 984 B.</b> PSF-subtracted images of HD 984 showing the companion HD 984 B (labeled) to the northeast of the star,
+        from nod position A (left), nod position B (right), and their average (bottom). Shanks et al., in prep.</figcaption>
     </figure>
 
-    <div style="margin-top:32px">
+    <div style="margin-top:28px">
       <div class="entry">
         <div class="date">In prep.</div>
         <div>
-          <h3><span class="badge draft">Draft</span>Shanks, J., Wagner, K., et al. "Orbital and Atmospheric Characterization of the Brown Dwarf Companion HD 984 B with LBTI,"</h3>
-          <div class="meta"><b>Jeremy Shanks</b>, Kevin Wagner</div>
-          <!--<div class="meta">To be submitted to AJ · Draft — please do not cite or distribute</div>
-          <div class="actions"><a href="files/draft-paper.pdf">PDF</a><a href="#" onclick="this.nextElementSibling.hidden=!this.nextElementSibling.hidden;return false">Abstract</a><span hidden style="display:block;color:var(--muted);margin-top:6px">[Paste abstract here]</span></div>-->
+          <h3><span class="badge prep">In prep.</span>Orbital and Atmospheric Characterization of the Brown Dwarf Companion HD 984 B with LBTI</h3>
+          <div class="meta"><b>J. Shanks</b>, K. Wagner, et al.</div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="presentations">
-    <h2><span class="num">03</span>Posters &amp; Talks</h2>
+    <h2>Posters &amp; Talks</h2>
 
     <div class="entry">
       <div class="date">Jan 2026</div>
       <div>
         <h3><span class="badge poster">Poster</span>L-band Imaging of HD 984 with LBTI: New Orbital and Atmospheric Constraints</h3>
-        <div class="meta">247th AAS Meeting, Phoenix, AZ</div>
-        <div class="actions"><a href="aas (iPosterSessions - an aMuze! Interactive system) (1).pdf">Poster (PDF)</a></div>
+        <div class="meta">247th Meeting of the American Astronomical Society, Phoenix, AZ</div>
+        <div class="actions"><a href="Shanks_AAS247_poster.pdf">Poster (PDF)</a></div>
       </div>
     </div>
 
@@ -183,58 +180,32 @@ position A (left), nod position B (right), and their average (bottom).  Credit: 
       <div class="date">Aug 2026</div>
       <div>
         <h3><span class="badge talk">Talk</span>Roman Space Telescope WFI Anomaly Detection with Machine Learning</h3>
-        <div class="meta">REU Summer Project Presentation for Engineering and Technology Directorate, NASA Goddard</div>
-        <div class="actions"><a href="Roman_Space_Telescope_WFI_AI_Anomaly_Detection_Shanks_Jeremy (1) (1).pdf">Slides (PDF)</a></div>
+        <div class="meta">Summer internship presentation, Engineering and Technology Directorate, NASA Goddard Space Flight Center</div>
       </div>
     </div>
   </section>
 
-
   <section id="cv">
-    <h2><span class="num">04</span>CV &amp; Education</h2>
+    <h2>CV &amp; Education</h2>
     <ul class="edu">
-      <li><span class="date">2023–2027</span><span><b>B.S. Astronomy</b>, The University of Arizona<br><span style="color:var(--muted);font-size:14px">Minor in Physics, Computer Science, Astrobiology</span></span></li>
+      <li><span class="date">2023–2027</span><span><b>B.S. Astronomy</b>, University of Arizona<br><span style="color:var(--muted);font-size:15px">Minors in physics, computer science, and astrobiology</span></span></li>
     </ul>
-    <div class="cv-box" style="margin-top:24px">
-      <div><b>Full CV</b><br><span style="color:var(--muted);font-size:14px">Last updated Nov 2026</span></div>
-      <a class="btn" href="files/CV.pdf">Download CV (PDF)</a>
-    </div>
+    <a class="cv-link" href="Shanks_CV.pdf">Download CV (PDF)</a>
   </section>
 
   <section id="contact">
-    <h2><span class="num">05</span>Contact</h2>
-    <p>The best way to reach me is by email at jeremyshanks@arizona.edu.</p>
+    <h2>Contact</h2>
+    <p>The best way to reach me is by email at <a href="mailto:jeremyshanks@arizona.edu">jeremyshanks@arizona.edu</a>.</p>
   </section>
 
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr"></span> Jeremy Shanks</span>
-    <span>Last updated Nov 2026</span>
+    <span>© 2026 Jeremy Shanks</span>
+    <span>Last updated November 2026</span>
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  // scatter noisy "photometry" points along the transit curve
-  (function(){
-    const g = document.querySelector('.lightcurve g');
-    const ns = 'http://www.w3.org/2000/svg';
-    function model(x){
-      if (x<400||x>600) return 30;
-      if (x<470) return 30 + 32*Math.sin((x-400)/70*Math.PI/2);
-      if (x<=530) return 62;
-      return 62 - 32*Math.sin((x-530)/70*Math.PI/2);
-    }
-    for (let x=4; x<1000; x+=7){
-      const c = document.createElementNS(ns,'circle');
-      c.setAttribute('cx',x);
-      c.setAttribute('cy',model(x)+(Math.random()-.5)*10);
-      c.setAttribute('r',1.6);
-      g.appendChild(c);
-    }
-  })();
-</script>
 </body>
 </html>
